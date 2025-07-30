@@ -27,6 +27,12 @@ The workflow is triggered automatically on pushes to the `main` branch or manual
 
 These secrets must be configured in the repository’s **Secrets** on GitHub.
 
+## Updating the KS Slug
+
+If you want to update a different Knowledge Source (KS), you must change the KS slug in the workflow configuration. The KS slug uniquely identifies the Knowledge Source you wish to update in StackSpot. Make sure to replace the existing slug value with the slug of your target KS in the workflow file (for example, in the `target_id` field of the upload step).
+
+> **Note:** The KS slug must match the one created in StackSpot. If you are unsure about the correct slug, check your StackSpot dashboard or contact your administrator.
+
 ## Example Execution
 
 When you update the `README.md` file and push to the `main` branch, the workflow will run automatically, sending the new content to the configured KS.
